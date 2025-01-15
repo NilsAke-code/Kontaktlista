@@ -1,4 +1,5 @@
-﻿namespace Business.Interfaces
+﻿
+namespace Business.Interfaces
 {
     public interface IIdGenerator
     {

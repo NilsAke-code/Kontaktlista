@@ -10,7 +10,7 @@ namespace Business.Services
         private readonly ContactFactory _factory = factory;
         private readonly IFileService _fileService = fileService;
 
-        // Jag fick hjälp av Chatgpt 4o att ändra returtyp till en bool från void, för att jag vill få en indikering om kontakten skapades korrekt eller om det blev fel.
+        //  Detta är genererat av Chat GPT 4.0 - Denna kod gör att returtypen ändrades till bool från void för att indikera om kontakten skapades korrekt eller om ett fel inträffade.
         public bool CreateContact(string firstName, string lastName, string email, string phoneNumber, string streetAddress, string postalCode, string city)
         {
             try
@@ -54,11 +54,13 @@ namespace Business.Services
         }
         
         public void LoadContacts(string filePath)
+
+            // Detta är genererat av Chat GPT 4.0 - Denna kod gör att en metod används för att undvika dubletter
+            // genom att först hämta alla befintliga kontakter och kontrollera om en kontakt med samma unika (Guid) redan finns.
         {
             var contacts = _fileService.LoadFromFile(filePath);
             foreach (var contact in contacts)
-            { // Chatgpt 4o gav som förslag att lägga in en metod för att undvika dubletter, först hämtar den alla kontakter som redan finns -
-                // om kontakten har samma unika ID (Guid) så läggs inte kontakten till.
+            { 
                 if (!_repository.GetAllContacts().Any(c => c.Id == contact.Id))
                 {
                     _repository.AddContact(contact);
