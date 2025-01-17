@@ -2,21 +2,20 @@
 using Business.Interfaces;
 using Business.Models;
 
-namespace Business.Repositories
+namespace Business.Repositories;
+
+
+public class ContactRepository : IContactRepository
 {
+    private readonly List<ContactModel> _contacts = [];
 
-    public class ContactRepository : IContactRepository
+    public void AddContact(ContactModel contact)
     {
-        private readonly List<ContactModel> _contacts = [];
+        _contacts.Add(contact);
+    }
 
-        public void AddContact(ContactModel contact)
-        {
-            _contacts.Add(contact);
-        }
-
-        public List<ContactModel> GetAllContacts()
-        {
-            return _contacts;
-        }
+    public List<ContactModel> GetAllContacts()
+    {
+        return _contacts;
     }
 }

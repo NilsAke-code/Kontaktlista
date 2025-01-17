@@ -1,10 +1,9 @@
 ﻿using Business.Models;
 
-namespace Business.Interfaces
+namespace Business.Interfaces;
+
+public interface IFileService
 {
-    public interface IFileService
-    {
-        void SaveToFile(string filePath, List<ContactModel> contacts);
-        List<ContactModel> LoadFromFile(string filePath);
-    }
+    void SaveToFile(string filePath, List<ContactModel> contacts);
+    List<ContactModel> LoadFromFile(string filePath);
 }

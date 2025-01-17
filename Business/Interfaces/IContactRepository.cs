@@ -1,10 +1,9 @@
 ﻿using Business.Models;
 
-namespace Business.Interfaces
+namespace Business.Interfaces;
+
+public interface IContactRepository
 {
-    public interface IContactRepository
-    {
-        void AddContact(ContactModel contact);
-        List<ContactModel> GetAllContacts();
-    }
+    void AddContact(ContactModel contact);
+    List<ContactModel> GetAllContacts();
 }

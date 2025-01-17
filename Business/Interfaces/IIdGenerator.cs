@@ -1,8 +1,7 @@
 ﻿
-namespace Business.Interfaces
+namespace Business.Interfaces;
+
+public interface IIdGenerator
 {
-    public interface IIdGenerator
-    {
-        Guid GenerateId();
-    }
+    Guid GenerateId();
 }

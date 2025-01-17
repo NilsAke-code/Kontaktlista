@@ -1,14 +1,15 @@
 ﻿using Business.Interfaces;
 
 
-namespace Business.Helpers
-{
+namespace Business.Helpers;
 
-    public class IdGenerator : IIdGenerator
-    {
-        public Guid GenerateId()
-        { 
-        return Guid.NewGuid(); 
-        }
+
+public class IdGenerator : IIdGenerator
+{
+    public Guid GenerateId()
+    { 
+
+    return Guid.NewGuid(); 
+
     }
 }
