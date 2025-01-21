@@ -4,10 +4,10 @@ using Business.Models;
 
 namespace Business.Services;
 
-public class ContactService(IContactRepository repository, ContactFactory factory, IFileService fileService) : IContactService
+public class ContactService(IContactRepository repository, ContactFactory contactFactory, IFileService fileService) : IContactService
 {
     private readonly IContactRepository _repository = repository;
-    private readonly ContactFactory _factory = factory;
+    private readonly ContactFactory contactFactory = contactFactory;
     private readonly IFileService _fileService = fileService;
 
     //  Detta är genererat av Chat GPT 4.0 - Denna kod gör att returtypen ändrades till bool från void för att indikera om kontakten skapades korrekt eller om ett fel inträffade.

@@ -1,5 +1,5 @@
-﻿using Business.Interfaces;
-using Business.Helpers;
+﻿using Business.Helpers;
+using Business.Interfaces;
 
 namespace Kontaktlista.Dialogs;
 

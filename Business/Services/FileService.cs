@@ -1,6 +1,6 @@
 ﻿using Business.Interfaces;
-using System.Text.Json;
 using Business.Models;
+using System.Text.Json;
 
 namespace Business.Services;
 

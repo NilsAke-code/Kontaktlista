@@ -1,6 +1,4 @@
-﻿
-
-using Business.Helpers;
+﻿using Business.Helpers;
 
 namespace Business.Tests.Helpers;
 

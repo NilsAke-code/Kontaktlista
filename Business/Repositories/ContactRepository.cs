@@ -1,5 +1,4 @@
-﻿
-using Business.Interfaces;
+﻿using Business.Interfaces;
 using Business.Models;
 
 namespace Business.Repositories;
